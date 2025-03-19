@@ -9,4 +9,8 @@ return {
         })
     end,
     packages = {},
+	load_after = {
+		 "DarktideLocalServer",
+		 "Audio",
+	},
 }
