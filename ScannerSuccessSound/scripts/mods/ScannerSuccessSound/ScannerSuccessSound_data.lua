@@ -15,8 +15,18 @@ return {
 				type = "dropdown",
 				default_value = "sfx_scanning_sucess.events.scanner_equip",
         		options = {
-                    {text = "scan_default", value = "sfx_scanning_sucess.events.scanner_equip"},
-                    {text = "scan_voc", value = "ability_shout.events.veteran_combat_ability"},
+                    {text = "scan_option_default", value = "sfx_scanning_sucess.events.scanner_equip"},
+                    {text = "scan_option_ability_ogryn_taunt", value = "ability_shout.events.ogryn_taunt_shout"},
+                    {text = "scan_option_ability_vent", value = "ability_shout.events.psyker_shout"},
+                    {text = "scan_option_ability_voc", value = "ability_shout.events.veteran_combat_ability"},
+                    {text = "scan_option_ability_book", value = "ability_shout.events.zealot_relic"},
+                    {text = "scan_option_plasma_eject", value = "plasma_flask_disconnect.events.plasmagun_p1_m1"},
+                    {text = "scan_option_special_forcesword", value = "sfx_special_activate.events.forcesword_p1_m1"},
+                    {text = "scan_option_special_ogryn_powermaul", value = "sfx_special_activate.events.ogryn_powermaul_p1_m1"}, -- crusher too
+                    {text = "scan_option_special_powermaul", value = "sfx_special_activate.events.powermaul_p1_m1"},
+                    {text = "scan_option_special_powersword_2h", value = "sfx_special_activate.events.powersword_2h_p1_m1"},
+                    {text = "scan_option_special_powersword", value = "sfx_special_activate.events.powersword_p1_m1"},
+                    {text = "scan_option_special_thunderhammer", value = "sfx_special_activate.events.thunderhammer_2h_p1_m1"},
                 }
 			},
         }

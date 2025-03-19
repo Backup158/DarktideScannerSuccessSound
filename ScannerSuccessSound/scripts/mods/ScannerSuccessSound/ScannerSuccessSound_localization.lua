@@ -1,4 +1,4 @@
-return {
+local localizations = {
     mod_name = {
         en = "Scanner Success Sound",
     },
@@ -15,3 +15,18 @@ return {
         en = "Auspex Scanner Completion Sound"
     },
 }
+
+localizations['scan_option_default'] = { en = "Default" }
+localizations['scan_option_ability_ogryn_taunt'] = { en = Localize("loc_ability_ogryn_taunt_shout") }
+localizations['scan_option_ability_vent'] = { en = Localize("loc_talent_psyker_shout_vent_warp_charge") }
+localizations['scan_option_ability_voc'] = { en = Localize("loc_talent_veteran_combat_ability_stagger_nearby_enemies") }
+localizations['scan_option_ability_book'] = { en = Localize("loc_talent_zealot_bolstering_prayer") }
+localizations['scan_option_plasma_eject'] = { en = "Plasma Eject" }
+localizations['scan_option_special_forcesword'] = { en = "Special Activation: Force Sword" }
+localizations['scan_option_special_ogryn_powermaul'] = { en = "Special Activation: Crusher/Ogryn Power Maul" }
+localizations['scan_option_special_powermaul'] = { en = "Special Activation: Shock Maul" }
+localizations['scan_option_special_powersword_2h'] = { en = "Special Activation: Relic Blade" }
+localizations['scan_option_special_powersword'] = { en = "Special Activation: Power Sword" }
+localizations['scan_option_special_thunderhammer'] = { en = "Special Activation: Thunder Hammer" }
+
+return localizations
