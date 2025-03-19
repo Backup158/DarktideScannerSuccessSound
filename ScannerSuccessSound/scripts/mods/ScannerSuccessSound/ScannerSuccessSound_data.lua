@@ -10,6 +10,11 @@ return {
 				type = "checkbox",
 				default_value = false,
 			},
+            {
+				setting_id = "use_audio",
+				type = "checkbox",
+				default_value = false,
+			},
 			{
                 setting_id = "scan_sound",
 				type = "dropdown",

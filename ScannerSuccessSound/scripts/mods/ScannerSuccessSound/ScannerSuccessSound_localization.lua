@@ -11,6 +11,12 @@ local localizations = {
 	enable_debug_mode_description = {
 		en = "Enables verbose logging",
 	},
+    use_audio = {
+		en = "Use Audio Plugin",
+	},
+	use_audio_description = {
+		en = "Use sound from Audio Plugin. If this is enabled, the option from the dropdown menu will NOT be used.",
+	},
     scan_sound = {
         en = "Auspex Scanner Completion Sound"
     },
