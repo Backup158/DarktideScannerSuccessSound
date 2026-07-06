@@ -10,9 +10,9 @@ local PlayerCharacterSoundEventAliases = require("scripts/settings/sound/player_
 -- Helper Functions
 --#################################
 local debug
-local useAudio
-local replacementSound
-local replacementTable
+local use_audio
+local replacement_sound
+local replacement_table
 
 local Audio
 local audio_files
@@ -22,34 +22,34 @@ local audio_volume
 
 local function replaceTheSound()
     debug = mod:get("enable_debug_mode")
-    useAudio = mod:get("use_audio")
+    use_audio = mod:get("use_audio")
 
     -- User is NOT using Audio plugin, so get option from dropdown
     -- Replace the sound then return
     -- btw, sfx_scanning_sucess is NOT a typo from my end lol
-    if not useAudio then
-        replacementSound = mod:get("scan_sound")
+    if not use_audio then
+        replacement_sound = mod:get("scan_sound")
         -- Default Case. Directly replace with the sound and gtfo
-        if replacementSound == "sfx_scanning_sucess.events.scanner_equip" then
+        if replacement_sound == "sfx_scanning_sucess.events.scanner_equip" then
             PlayerCharacterSoundEventAliases.sfx_scanning_sucess.events.scanner_equip = "wwise/events/player/play_scanner_collect_success"
             return
         end
 
-        replacementTable = {}
+        replacement_table = {}
         -- Splits value into keys 
         --  %. escapes the magic character (period)
         --  [^%.] match anything that's not a period
         --  [^%.]+ match the longest string of not periods
-        for v in string.gmatch(replacementSound, "[^%.]+") do 
-            table.insert(replacementTable, v)
+        for v in string.gmatch(replacement_sound, "[^%.]+") do 
+            table.insert(replacement_table, v)
             if debug then mod:echo("Split string result: "..tostring(v)) end
         end
 
         if debug then 
-            mod:echo("Replacement Sound is: "..replacementSound)
-            mod:echo("Replacing sfx_scanning_sucess.events.scanner_equip with: "..PlayerCharacterSoundEventAliases[replacementTable[1]][replacementTable[2]][replacementTable[3]]) 
+            mod:echo("Replacement Sound is: "..replacement_sound)
+            mod:echo("Replacing sfx_scanning_sucess.events.scanner_equip with: "..PlayerCharacterSoundEventAliases[replacement_table[1]][replacement_table[2]][replacement_table[3]]) 
         end
-        PlayerCharacterSoundEventAliases.sfx_scanning_sucess.events.scanner_equip = PlayerCharacterSoundEventAliases[replacementTable[1]][replacementTable[2]][replacementTable[3]]
+        PlayerCharacterSoundEventAliases.sfx_scanning_sucess.events.scanner_equip = PlayerCharacterSoundEventAliases[replacement_table[1]][replacement_table[2]][replacement_table[3]]
         return
     else
         -- User is using Audio plugin
