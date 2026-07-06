@@ -12,9 +12,9 @@ If you're not using the Audio plugin, this can go anywhere in the load order. Ot
 ## Audio Plugin Integration
 First of all, READ THE MOD PAGE FOR THE AUDIO PLUGIN. There are some important settings you need to check.
 
-    ﻿DarktideLocalServer
-    Audio
-    ScanningSuccessSounds
+> DarktideLocalServer
+> Audio
+> ScanningSuccessSounds
 
 If you have other Audio plugins, the position of this plugin in relation to them doesn't matter. Just make sure you're following the load order instructions on Darktide Local Server and Audio.
 
