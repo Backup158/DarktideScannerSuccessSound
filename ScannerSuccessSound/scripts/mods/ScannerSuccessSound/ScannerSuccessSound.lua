@@ -52,6 +52,7 @@ local function replaceTheSound()
     end
 
     -- User is using Audio plugin
+    -- Hook the sound, then play the custom sound (while silencing the original)
     Audio = get_mod("Audio")
     SimpleAudio = get_mod("SimpleAudio")
     -- Setting sound back to default
