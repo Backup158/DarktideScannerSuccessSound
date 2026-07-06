@@ -71,6 +71,7 @@ local function replaceTheSound()
         audio_volume = mod:get("audio_volume")
 
         -- Setting sound back to default
+        -- Since this is the one the hooks are looking for, reset it, in case this was replaced earlier
         PlayerCharacterSoundEventAliases.sfx_scanning_sucess.events.scanner_equip = "wwise/events/player/play_scanner_collect_success"
 
         if SimpleAudio then
