@@ -18,6 +18,12 @@ First of all, READ THE MOD PAGE FOR THE AUDIO PLUGIN. There are some important s
 
 If you have other Audio plugins, the position of this plugin in relation to them doesn't matter. Just make sure you're following the load order instructions on Darktide Local Server and Audio.
 
+## Simple Audio Integration
+It appears Simple Audio can be placed anywhere. Put this mod below it, wherever it is.
+
+> SimpleAudio
+> ScanningSuccessSounds
+
 ## Audio File Modification
 When you install this mod, there's an audio folder in the mod folder. This includes some example sounds. If you want a sound to play, move it into the active folder inside the audio folder; to remove a sound, move it out of active. You can add as many custom sounds as you want (until the Audio plugin breaks under the weight). This mod will choose a random sound to play from all active sounds.
 
