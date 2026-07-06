@@ -1,3 +1,5 @@
+# Success of Scanning (SoS)
+
 Ever put away the auspex scanner and thought to yourself, "Wait, did I actually finish that scan?" before whipping it back out to check? No longer will you have to, for this mod adds* a confirmation sound!
 
 Choose the sound you want to use in the Mod Options menu, and you're good to go. You can choose between four ability activation sounds (Vet shout, Zealot book pulse, Psyker shriek, and Ogryn taunt). Whenever you successfully scan a target in an Investigation mission, the sound will play.
