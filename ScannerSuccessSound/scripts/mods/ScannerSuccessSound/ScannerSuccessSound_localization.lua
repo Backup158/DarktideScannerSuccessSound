@@ -15,7 +15,7 @@ local localizations = {
 		en = "Custom Audio",
 	},
 	use_audio_description = {
-		en = "Use sound from Simple Audio or the Audio Plugin. If this is enabled, the option from the dropdown menu will NOT be used.",
+		en = "Use sound from Simple Audio or the Audio Plugin, with Simple Audio having priority.\nIf this is enabled, the option from the dropdown menu will NOT be used.",
 	},
     error_no_audio_frameworks = {
         en = "Simple Audio or the Audio plugin is required for this option!",
