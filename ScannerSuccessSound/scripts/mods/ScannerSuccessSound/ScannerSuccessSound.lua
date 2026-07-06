@@ -60,7 +60,9 @@ local function replace_scan_sound()
         --  [^%.]+ match the longest string of not periods
         for v in string_regex_match(replacement_sound, "[^%.]+") do 
             table_insert(replacement_table, v)
-            if debug then mod:echo("Split string result: "..tostring(v)) end
+            if debug then 
+                mod:echo("Split string result: "..tostring(v)) 
+            end
         end
 
         if debug then 
