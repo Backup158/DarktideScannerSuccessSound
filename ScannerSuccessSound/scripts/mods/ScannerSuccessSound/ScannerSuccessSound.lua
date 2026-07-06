@@ -9,6 +9,8 @@ mod.version = "1.1.0"
 -- ################
 local string = string
 local string_regex_match = string.gmatch
+local table = table
+local table_insert = table.insert
 
 -- ################
 -- Requirements
@@ -57,7 +59,7 @@ local function replace_scan_sound()
         --  [^%.] match anything that's not a period
         --  [^%.]+ match the longest string of not periods
         for v in string_regex_match(replacement_sound, "[^%.]+") do 
-            table.insert(replacement_table, v)
+            table_insert(replacement_table, v)
             if debug then mod:echo("Split string result: "..tostring(v)) end
         end
 
