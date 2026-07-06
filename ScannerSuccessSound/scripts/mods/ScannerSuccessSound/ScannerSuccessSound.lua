@@ -83,6 +83,7 @@ local function replace_scan_sound()
         reset_scan_sound_to_default()
 
         if SimpleAudio then
+            if debug then mod:echo("Using SimpleAudio") end
             SimpleAudioRandom = SimpleAudio.glob("active/*")
 
             SimpleAudio.hook_sound("^wwise/events/player/play_scanner_collect_success", function(sound_type, event_name, delta, position_or_unit_or_id)
@@ -102,6 +103,8 @@ local function replace_scan_sound()
                 return false
             end)
         elseif Audio then
+            if debug then mod:echo("Using Audio") end
+
             audio_files = Audio.new_files_handler()
 
             -- Audio only goes from 0-100, while SimpleAudio goes 0-200. I'm using the same widget for both, so this is a bit of precaution to avoid issues
