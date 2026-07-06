@@ -2,13 +2,20 @@ local mod = get_mod("ScannerSuccessSound")
 mod.version = "1.1.0"
 
 --#################################
--- Requirements
+-- Data
 --#################################
+-- ################
+-- Performance
+-- ################
+
+-- ################
+-- Requirements
+-- ################
 local PlayerCharacterSoundEventAliases = require("scripts/settings/sound/player_character_sound_event_aliases")
 
---#################################
--- Helper Functions
---#################################
+-- ################
+-- Mod Locals
+-- ################
 local debug
 local use_audio
 local replacement_sound
@@ -20,6 +27,9 @@ local SimpleAudio
 local SimpleAudioRandom
 local audio_volume
 
+--#################################
+-- Helper Functions
+--#################################
 local function replaceTheSound()
     debug = mod:get("enable_debug_mode")
     use_audio = mod:get("use_audio")
