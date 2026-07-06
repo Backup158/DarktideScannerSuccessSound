@@ -85,12 +85,18 @@ local function replace_scan_sound()
         if SimpleAudio then
             SimpleAudioRandom = SimpleAudio.glob("active/*")
 
-            SimpleAudio.hook_sound("play_scanner_collect_success", function(sound_type, event_name, delta, position_or_unit_or_id)
+            SimpleAudio.hook_sound("^wwise/events/player/play_scanner_collect_success", function(sound_type, event_name, delta, position_or_unit_or_id)
+                local playback_target
+
+                if sound_type == "3d_sound" or sound_type == "unit_sound" then
+                    playback_target = position_or_unit_or_id
+                end
+               
                 if delta == nil or delta > 0.1 then
                     SimpleAudioRandom:play({
                         audio_type = "sfx",
                         volume = audio_volume,
-                    })
+                    }, playback_target)
                 end
 
                 return false
