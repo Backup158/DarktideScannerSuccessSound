@@ -129,3 +129,6 @@ end
 mod.on_setting_changed = function()
     replaceTheSound()
 end
+mod.on_disabled = function()
+    set_sound_to_default()
+end
