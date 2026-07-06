@@ -36,7 +36,7 @@ local function reset_sound_to_default()
     PlayerCharacterSoundEventAliases.sfx_scanning_sucess.events.scanner_equip = "wwise/events/player/play_scanner_collect_success"
 end
 
-local function replaceTheSound()
+local function replace_scan_sound()
     debug = mod:get("enable_debug_mode")
     use_audio = mod:get("use_audio")
 
@@ -124,10 +124,10 @@ end
 --#################################
 mod.on_all_mods_loaded = function()
     mod:info("ScannerSuccessSound v" .. mod.version .. " loaded uwu nya :3")
-    replaceTheSound()
+    replace_scan_sound()
 end
 mod.on_setting_changed = function()
-    replaceTheSound()
+    replace_scan_sound()
 end
 mod.on_disabled = function()
     reset_sound_to_default()
