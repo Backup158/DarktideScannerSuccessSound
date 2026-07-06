@@ -36,4 +36,4 @@ Ok fine, I'll do it here. Technically, there already is a scan completion wwise 
 
 **Can you add more options?**
 
-My design is not the most robust so it'll take non-trivial work to add them to this mod. This plugin came to be because I was getting sidetracked and distracting myself from other projects, so that's a bit more effort than I'd like to put in (shitposting with the mod images always gets priority though >:3).
+My design is not the most robust on that end, so it'll take non-trivial work to add them to this mod. This plugin came to be because I was getting sidetracked and distracting myself from other projects, so that's a bit more effort than I'd like to put in (shitposting with the mod images always gets priority though >:3).
