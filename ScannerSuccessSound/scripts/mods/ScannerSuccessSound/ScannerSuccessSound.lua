@@ -74,6 +74,11 @@ local function replaceTheSound()
         elseif Audio then
             audio_files = Audio.new_files_handler()
 
+            -- Audio only goes from 0-100, while SimpleAudio goes 0-200. I'm using the same widget for both, so this is a bit of precaution to avoid issues
+            if audio_volume > 100 then 
+                audio_volume = 100
+            end
+
             -- Actual audio hooking
             -- "wwise/events/player/play_scanner_collect_success"
             Audio.hook_sound("play_scanner_collect_success", function(sound_type, sound_name, delta)
