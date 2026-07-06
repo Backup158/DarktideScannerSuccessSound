@@ -49,44 +49,43 @@ local function replaceTheSound()
         end
         PlayerCharacterSoundEventAliases.sfx_scanning_sucess.events.scanner_equip = PlayerCharacterSoundEventAliases[replacementTable[1]][replacementTable[2]][replacementTable[3]]
         return
-    end
-
-    -- User is using Audio plugin
-    -- Hook the sound, then play the custom sound (while silencing the original)
-    Audio = get_mod("Audio")
-    SimpleAudio = get_mod("SimpleAudio")
-    -- Setting sound back to default
-    PlayerCharacterSoundEventAliases.sfx_scanning_sucess.events.scanner_equip = "wwise/events/player/play_scanner_collect_success"
-
-    if SimpleAudio then
-        SimpleAudioRandom = SimpleAudio.glob("active/*")
-
-        SimpleAudio.hook_sound("play_scanner_collect_success", function(sound_type, event_name, delta, position_or_unit_or_id)
-            SimpleAudioRandom:play({
-                audio_type = "sfx",
-                volume = 100,
-            })
-            return false
-        end)
-    elseif Audio then
-        audio_files = Audio.new_files_handler()
-
-        -- Actual audio hooking
-        -- "wwise/events/player/play_scanner_collect_success"
-        Audio.hook_sound("play_scanner_collect_success", function(sound_type, sound_name, delta)
-            if delta == nil or delta > 0.1 then
-                Audio.play_file(audio_files:random("active"), { 
-                    audio_type = "sfx",
-                })
-            end
-        
-            return false
-        end)
     else
-        mod:error("Simple Audio or the Audio plugin is required for this option!")
-        return
+        -- User is using Audio plugin
+        -- Hook the sound, then play the custom sound (while silencing the original)
+        Audio = get_mod("Audio")
+        SimpleAudio = get_mod("SimpleAudio")
+        -- Setting sound back to default
+        PlayerCharacterSoundEventAliases.sfx_scanning_sucess.events.scanner_equip = "wwise/events/player/play_scanner_collect_success"
+
+        if SimpleAudio then
+            SimpleAudioRandom = SimpleAudio.glob("active/*")
+
+            SimpleAudio.hook_sound("play_scanner_collect_success", function(sound_type, event_name, delta, position_or_unit_or_id)
+                SimpleAudioRandom:play({
+                    audio_type = "sfx",
+                    volume = 100,
+                })
+                return false
+            end)
+        elseif Audio then
+            audio_files = Audio.new_files_handler()
+
+            -- Actual audio hooking
+            -- "wwise/events/player/play_scanner_collect_success"
+            Audio.hook_sound("play_scanner_collect_success", function(sound_type, sound_name, delta)
+                if delta == nil or delta > 0.1 then
+                    Audio.play_file(audio_files:random("active"), { 
+                        audio_type = "sfx",
+                    })
+                end
+            
+                return false
+            end)
+        else
+            mod:error("Simple Audio or the Audio plugin is required for this option!")
+            return
+        end
     end
-    
     
 end
 
