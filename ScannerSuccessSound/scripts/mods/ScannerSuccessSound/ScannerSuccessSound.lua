@@ -65,10 +65,13 @@ local function replaceTheSound()
             SimpleAudioRandom = SimpleAudio.glob("active/*")
 
             SimpleAudio.hook_sound("play_scanner_collect_success", function(sound_type, event_name, delta, position_or_unit_or_id)
-                SimpleAudioRandom:play({
-                    audio_type = "sfx",
-                    volume = audio_volume,
-                })
+                if delta == nil or delta > 0.1 then
+                    SimpleAudioRandom:play({
+                        audio_type = "sfx",
+                        volume = audio_volume,
+                    })
+                end
+                
                 return false
             end)
         elseif Audio then
