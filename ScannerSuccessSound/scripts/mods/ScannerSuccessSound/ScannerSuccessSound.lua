@@ -74,7 +74,9 @@ local function replaceTheSound()
         -- "wwise/events/player/play_scanner_collect_success"
         Audio.hook_sound("play_scanner_collect_success", function(sound_type, sound_name, delta)
             if delta == nil or delta > 0.1 then
-                Audio.play_file(audio_files:random("active"), { audio_type = "sfx" })
+                Audio.play_file(audio_files:random("active"), { 
+                    audio_type = "sfx",
+                })
             end
         
             return false
