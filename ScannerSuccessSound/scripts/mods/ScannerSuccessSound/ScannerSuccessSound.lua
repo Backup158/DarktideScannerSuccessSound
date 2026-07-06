@@ -68,8 +68,8 @@ local function replace_scan_sound()
         PlayerCharacterSoundEventAliases.sfx_scanning_sucess.events.scanner_equip = PlayerCharacterSoundEventAliases[replacement_table[1]][replacement_table[2]][replacement_table[3]]
         return
     else
-        -- User is using Audio plugin
-        -- Hook the sound, then play the custom sound (while silencing the original)
+        -- At this point in the code, the user has selected Custom Audio
+        -- In either case, this will hook the sound, then play the custom sound (while silencing the original)
         Audio = get_mod("Audio")
         SimpleAudio = get_mod("SimpleAudio")
         audio_volume = mod:get("audio_volume")
@@ -112,7 +112,7 @@ local function replace_scan_sound()
                 return false
             end)
         else
-            mod:error("Simple Audio or the Audio plugin is required for this option!")
+            mod:error(mod:localize("error_no_audio_frameworks"))
             return
         end
     end
