@@ -2,12 +2,12 @@ Ever put away the auspex scanner and thought to yourself, "Wait, did I actually 
 
 Choose the sound you want to use in the Mod Options menu, and you're good to go. You can choose between four ability activation sounds (Vet shout, Zealot book pulse, Psyker shriek, and Ogryn taunt). Whenever you successfully scan a target in an Investigation mission, the sound will play.
 
-I've included an option to use the Audio plugin for custom sounds. The default custom sound is a toaster ding. See the modification section for details.
+I've included an option to use Simple Audio or the Audio plugin for custom sounds. The default custom sound is a toaster ding. See the modification section for details.
 
 # Installation
-Install like any other mod.
+Install like any other mod. See the [DMF guide for manual installation](https://dmf-docs.darkti.de/#/installing-mods) if you would like help.
 
-If you're not using the Audio plugin, this can go anywhere in the load order. There's also no requirements in this situation. Otherwise...
+If you're not using the Audio plugin, this can go anywhere in the load order. Otherwise...
 
 ## Audio Plugin Integration
 First of all, READ THE MOD PAGE FOR THE AUDIO PLUGIN. There are some important settings you need to check.
