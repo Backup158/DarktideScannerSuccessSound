@@ -32,6 +32,10 @@ local audio_volume
 --#################################
 -- Helper Functions
 --#################################
+local function set_sound_to_default()
+    PlayerCharacterSoundEventAliases.sfx_scanning_sucess.events.scanner_equip = "wwise/events/player/play_scanner_collect_success"
+end
+
 local function replaceTheSound()
     debug = mod:get("enable_debug_mode")
     use_audio = mod:get("use_audio")
@@ -43,7 +47,7 @@ local function replaceTheSound()
         replacement_sound = mod:get("scan_sound")
         -- Default Case. Directly replace with the sound and gtfo
         if replacement_sound == "sfx_scanning_sucess.events.scanner_equip" then
-            PlayerCharacterSoundEventAliases.sfx_scanning_sucess.events.scanner_equip = "wwise/events/player/play_scanner_collect_success"
+            set_sound_to_default()
             return
         end
 
@@ -72,7 +76,7 @@ local function replaceTheSound()
 
         -- Setting sound back to default
         -- Since this is the one the hooks are looking for, reset it, in case this was replaced earlier
-        PlayerCharacterSoundEventAliases.sfx_scanning_sucess.events.scanner_equip = "wwise/events/player/play_scanner_collect_success"
+        set_sound_to_default()
 
         if SimpleAudio then
             SimpleAudioRandom = SimpleAudio.glob("active/*")
