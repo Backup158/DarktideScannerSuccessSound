@@ -12,16 +12,17 @@ local localizations = {
 		en = "Enables verbose logging",
 	},
     use_audio = {
-		en = "Use Audio Plugin",
+		en = "Custom Sound",
 	},
 	use_audio_description = {
-		en = "Use sound from Audio Plugin. If this is enabled, the option from the dropdown menu will NOT be used.",
+		en = "Use sound from Simple Audio or the Audio Plugin. If this is enabled, the option from the dropdown menu will NOT be used.",
 	},
     scan_sound = {
         en = "Auspex Scanner Completion Sound"
     },
 }
 
+-- I don't know why I put these out here lol
 localizations['scan_option_default'] = { en = "Default" }
 localizations['scan_option_ability_ogryn_taunt'] = { en = Localize("loc_ability_ogryn_taunt_shout") }
 localizations['scan_option_ability_vent'] = { en = Localize("loc_talent_psyker_shout_vent_warp_charge") }
