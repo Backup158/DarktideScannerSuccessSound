@@ -7,6 +7,8 @@ mod.version = "1.1.0"
 -- ################
 -- Performance
 -- ################
+local string = string
+local string_regex_match = string.gmatch
 
 -- ################
 -- Requirements
@@ -50,7 +52,7 @@ local function replaceTheSound()
         --  %. escapes the magic character (period)
         --  [^%.] match anything that's not a period
         --  [^%.]+ match the longest string of not periods
-        for v in string.gmatch(replacement_sound, "[^%.]+") do 
+        for v in string_regex_match(replacement_sound, "[^%.]+") do 
             table.insert(replacement_table, v)
             if debug then mod:echo("Split string result: "..tostring(v)) end
         end
