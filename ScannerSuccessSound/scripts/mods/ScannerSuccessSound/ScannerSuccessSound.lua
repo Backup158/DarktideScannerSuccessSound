@@ -13,10 +13,12 @@ local debug
 local useAudio
 local replacementSound
 local replacementTable
+
 local Audio
 local audio_files
 local SimpleAudio
 local SimpleAudioRandom
+local audio_volume
 
 local function replaceTheSound()
     debug = mod:get("enable_debug_mode")
@@ -54,6 +56,8 @@ local function replaceTheSound()
         -- Hook the sound, then play the custom sound (while silencing the original)
         Audio = get_mod("Audio")
         SimpleAudio = get_mod("SimpleAudio")
+        audio_volume = mod:get("audio_volume")
+
         -- Setting sound back to default
         PlayerCharacterSoundEventAliases.sfx_scanning_sucess.events.scanner_equip = "wwise/events/player/play_scanner_collect_success"
 
@@ -63,7 +67,7 @@ local function replaceTheSound()
             SimpleAudio.hook_sound("play_scanner_collect_success", function(sound_type, event_name, delta, position_or_unit_or_id)
                 SimpleAudioRandom:play({
                     audio_type = "sfx",
-                    volume = 100,
+                    volume = audio_volume,
                 })
                 return false
             end)
@@ -76,6 +80,7 @@ local function replaceTheSound()
                 if delta == nil or delta > 0.1 then
                     Audio.play_file(audio_files:random("active"), { 
                         audio_type = "sfx",
+                        volume = audio_volume,
                     })
                 end
             

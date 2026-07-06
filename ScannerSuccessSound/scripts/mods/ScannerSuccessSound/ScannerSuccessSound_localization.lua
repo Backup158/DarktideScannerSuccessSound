@@ -12,11 +12,20 @@ local localizations = {
 		en = "Enables verbose logging",
 	},
     use_audio = {
-		en = "Custom Sound",
+		en = "Custom Audio",
 	},
 	use_audio_description = {
 		en = "Use sound from Simple Audio or the Audio Plugin. If this is enabled, the option from the dropdown menu will NOT be used.",
 	},
+    audio_volume = {
+        en = "Volume for Custom Audio",
+    },
+    audio_volume_description = {
+        en = "Adjusts volume of sound.\nNote: SimpleAudio supports 0 to 200%, but Audio only supports 0 to 100%. If you use a value above 100 for Audio, it will just stay at 100.",
+    },
+    audio_volume_units = {
+        en = "%",
+    },
     scan_sound = {
         en = "Auspex Scanner Completion Sound"
     },
