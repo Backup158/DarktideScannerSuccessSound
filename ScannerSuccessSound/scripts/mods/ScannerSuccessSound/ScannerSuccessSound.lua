@@ -1,5 +1,5 @@
 local mod = get_mod("ScannerSuccessSound")
-mod.version = "1.0"
+mod.version = "1.1.0"
 
 --#################################
 -- Requirements
@@ -71,7 +71,7 @@ local function replaceTheSound()
                         volume = audio_volume,
                     })
                 end
-                
+
                 return false
             end)
         elseif Audio then
