@@ -18,7 +18,7 @@ return {
                     {
                         setting_id = "audio_volume",
                         type = "numeric",
-                        default_value = 100,
+                        default_value = 75,
                         range = {0, 200},
                         unit_text = "audio_volume_units",
                         decimals_number = 1,
