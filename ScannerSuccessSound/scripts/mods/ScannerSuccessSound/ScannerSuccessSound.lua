@@ -86,12 +86,17 @@ local function replace_scan_sound()
             if debug then mod:echo("Using SimpleAudio") end
             SimpleAudioRandom = SimpleAudio.glob("active/*")
 
-            SimpleAudio.hook_sound("play_scanner_collect_success", function(sound_type, event_name, delta, position_or_unit_or_id)
+            -- By hooking a wwise event:
+            --  ^wwise/events/player/play_scanner_collect_success
+            --      It plays for when all allies scan, while your scannner is out
+            --  play_scanner_collect_success
+            --      It plays for when all allies scan
+            --  ^wwise/events/player/play_scanner_collect_success$
+            --      It plays
+            SimpleAudio.hook_sound("^wwise/events/player/play_scanner_collect_success$", function(sound_type, event_name, delta, position_or_unit_or_id)
                 -- This hooks a wwise event, so position_or_unit_or_id is id of the wwise source
                 local playback_target
 
-                -- By hooking a wwise event such as ^wwise/events/player/play_scanner_collect_success
-                --   It plays for when all allies scan, while your scannner is out
                 -- mod:echo("Sound Type: "..tostring(sound_type).."; Event Name: "..tostring(event_name).."; Delta: "..tostring(delta).."; ID: ("..type(position_or_unit_or_id)..") "..tostring(position_or_unit_or_id))
                 if sound_type == "3d_sound" or sound_type == "unit_sound" then
                     playback_target = position_or_unit_or_id
