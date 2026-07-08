@@ -27,7 +27,7 @@ It appears Simple Audio can be placed anywhere. Put this mod below it, wherever 
 > ScanningSuccessSounds
 
 ## Audio File Modification
-When you install this mod, there's an audio folder in the mod folder. This includes some example sounds. If you want a sound to play, move it into the active folder inside the audio folder; to remove a sound, move it out of active. You can add as many custom sounds as you want (until the Audio plugin breaks under the weight). This mod will choose a random sound to play from all active sounds.
+When you install this mod, there's an audio folder in the mod folder: `<darktide_game_folder>/mods/ScannerSuccessSound/audio`. This includes some example sounds. If you want a sound to play, move it into the `active` folder inside the audio folder; to remove a sound, move it out of active. You can add as many custom sounds as you want (until the Audio plugin breaks under the weight, which I haven't known to happen). This mod will choose a random sound to play from all active sounds.
 
 By default, I have a toaster ding sound active. There's also some inactive sounds from the guy yells at cats meme video.
 
