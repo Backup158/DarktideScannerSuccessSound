@@ -6,6 +6,7 @@
 ### Changed
 - Reduced default volume of custom sounds to 75%. The toaster ding was too loud for me. It was previously at 100%.
 - Refactored string match and table insert for performance
+- Reduced delay before toaster ding
 ### Docs
 - Adapted my typical versiom numbering system
 - Renamed functions to snake_case
