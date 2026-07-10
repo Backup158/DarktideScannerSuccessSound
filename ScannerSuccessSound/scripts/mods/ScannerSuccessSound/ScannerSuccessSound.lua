@@ -93,6 +93,7 @@ local function replace_scan_sound()
             --      It plays for when all allies scan
             --  ^wwise/events/player/play_scanner_collect_success$
             --      It plays
+            -- play_scanner_collect_success_husk seems to be the allied scan when your scanner is away
             SimpleAudio.hook_sound("^wwise/events/player/play_scanner_collect_success$", function(sound_type, event_name, delta, position_or_unit_or_id)
                 -- This hooks a wwise event, so position_or_unit_or_id is id of the wwise source
                 local playback_target
