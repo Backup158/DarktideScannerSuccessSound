@@ -1,8 +1,14 @@
 # Success of Scanning (SoS)
 
+![Thumbnail image](./assets/images/ScannerSucessSound_Thumbnail2.png)
+
 Ever put away the auspex scanner and thought to yourself, "Wait, did I actually finish that scan?" before whipping it back out to check? No longer will you have to, for this mod adds* a confirmation sound!
 
 Choose the sound you want to use in the Mod Options menu, and you're good to go. You can choose between four ability activation sounds (Vet shout, Zealot book pulse, Psyker shriek, and Ogryn taunt). Whenever you successfully scan a target in an Investigation mission, the sound will play.
+
+![Mod Options menu](./assets/images/ModOptionsAudio.png)
+
+![Mod Options dropdown for default](./assets/images/ModOptionsDropdown.png)
 
 I've included an option to use Simple Audio or the Audio plugin for custom sounds. The default custom sound is a toaster ding. See the modification section for details.
 
@@ -34,6 +40,8 @@ When you install this mod, there's an audio folder in the mod folder: `<darktide
 
 By default, I have a toaster ding sound active. There's also some inactive sounds from the guy yells at cats meme video.
 
+![toasty](./assets/images/ScanningSuccessSoundsImage.png)
+
 # FAQ
 **You never expanded on the * footnote!**
 
@@ -42,3 +50,5 @@ Ok fine, I'll do it here. Technically, there already is a scan completion wwise 
 **Can you add more options?**
 
 My design is not the most robust on that end, so it'll take non-trivial work to add them to this mod. This plugin came to be because I was getting sidetracked and distracting myself from other projects, so that's a bit more effort than I'd like to put in (shitposting with the mod images always gets priority though >:3).
+
+![Yells at cats](./assets/images/vetYellsAtCatsBanner.png)
