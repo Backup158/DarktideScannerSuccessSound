@@ -1,0 +1,11 @@
+{
+  "name": "Success of Scanning (SoS)",
+  "description": "Changes the sound that plays after the player successfully uses the auspex scanner to a more noticeable sound.",
+  "version": "1.1.0",
+  "author": "Backup158",
+  "homepage": "https://www.nexusmods.com/warhammer40kdarktide/mods/487",
+  "source": "https://github.com/Backup158/DarktideScannerSuccessSound",
+  "dependencies": {
+    "self_after": ["Audio", "SimpleAudio"]
+  }
+}
