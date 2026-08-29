@@ -1,4 +1,4 @@
-# Success of Scanning (SoS)
+# Success of Scanning (SoS) - ScanningSuccessSound
 
 ![Thumbnail image](./assets/images/ScannerSucessSound_Thumbnail2.png)
 
@@ -24,7 +24,7 @@ First of all, READ THE MOD PAGE FOR THE AUDIO PLUGIN. There are some important s
 > 
 > Audio
 > 
-> ScanningSuccessSounds
+> ScanningSuccessSound
 
 If you have other Audio plugins, the position of this plugin in relation to them doesn't matter. Just make sure you're following the load order instructions on Darktide Local Server and Audio.
 
@@ -33,7 +33,7 @@ It appears Simple Audio can be placed anywhere. Put this mod below it, wherever 
 
 > SimpleAudio
 > 
-> ScanningSuccessSounds
+> ScanningSuccessSound
 
 ## Audio File Modification
 When you install this mod, there's an audio folder in the mod folder: `<darktide_game_folder>/mods/ScannerSuccessSound/audio`. This includes some example sounds. If you want a sound to play, move it into the `active` folder inside the audio folder; to remove a sound, move it out of active. You can add as many custom sounds as you want (until the Audio plugin breaks under the weight, which I haven't known to happen). This mod will choose a random sound to play from all active sounds.
