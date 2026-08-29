@@ -6,9 +6,7 @@ Ever put away the auspex scanner and thought to yourself, "Wait, did I actually 
 
 Choose the sound you want to use in the Mod Options menu, and you're good to go. You can choose between four ability activation sounds (Vet shout, Zealot book pulse, Psyker shriek, and Ogryn taunt). Whenever you successfully scan a target in an Investigation mission, the sound will play.
 
-![Mod Options menu](./assets/images/ModOptionsAudio.png)
-
-![Mod Options dropdown for default](./assets/images/ModOptionsDropdown.png)
+![Mod Options menu](./assets/images/ModOptionsAudio.png) ![Mod Options dropdown for default](./assets/images/ModOptionsDropdown.png)
 
 I've included an option to use Simple Audio or the Audio plugin for custom sounds. The default custom sound is a toaster ding. See the modification section for details.
 
