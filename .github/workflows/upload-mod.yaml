@@ -28,6 +28,6 @@ jobs:
           filename: ScannerSuccessSound.zip
           display_name: "Success of Scanning (SoS) - Scanner Success Sound"
           description: "https://backup158.github.io/DarktideScannerSuccessSound/CHANGELOG"
-          changelog: "https://backup158.github.io/DarktideScannerSuccessSound/CHANGELOG"
+          # changelog: "https://backup158.github.io/DarktideScannerSuccessSound/CHANGELOG"
           version: ${{ github.event.release.tag_name || github.event.inputs.version }}
           update_mod_version: true
