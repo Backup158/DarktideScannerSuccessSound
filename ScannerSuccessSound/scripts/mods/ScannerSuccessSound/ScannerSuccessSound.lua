@@ -1,5 +1,4 @@
 local mod = get_mod("ScannerSuccessSound")
-mod.version = "1.1.0"
 
 --#################################
 -- Data
@@ -146,7 +145,6 @@ end
 -- Hooks and Execution
 --#################################
 mod.on_all_mods_loaded = function()
-    mod:info("ScannerSuccessSound v" .. mod.version .. " loaded uwu nya :3")
     replace_scan_sound()
 end
 mod.on_setting_changed = function()
